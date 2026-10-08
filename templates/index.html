@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LearnIQ | Learn • Practice • Grow</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mascot">🌟</div>
+      <div>
+        <div class="brand-name">LearnIQ</div>
+        <div class="brand-tag">Learn • Practice • Grow</div>
+      </div>
+    </div>
+
+    <nav class="side-nav">
+      <button class="nav-link active" data-page="home">🏠 <span>Home</span></button>
+      <button class="nav-link" data-page="learn">📖 <span>Learn</span></button>
+      <button class="nav-link" data-page="quizzes">☑️ <span>Quizzes</span></button>
+      <button class="nav-link" data-page="results">📊 <span>My Results</span></button>
+      <button class="nav-link" data-page="buddy">🐣 <span>Study Buddy</span></button>
+      <button class="nav-link" data-page="calendar">🗓️ <span>Calendar</span></button>
+      <button class="nav-link" data-page="badges">🏅 <span>Badges</span></button>
+      <button class="nav-link" data-page="profile">👤 <span>My Profile</span></button>
+    </nav>
+
+    <div class="sidebar-peep">
+      <div class="peep-face">🐣</div>
+      <p>You're doing amazing! Keep going! 💗</p>
+      <small>Small steps make big dreams.</small>
+    </div>
+  </aside>
+
+  <main class="main-area">
+    <header class="topbar">
+      <div>
+        <h2 id="greeting">Good morning! ☀️</h2>
+        <p>Keep learning, keep growing!</p>
+      </div>
+      <div class="topbar-right">
+        <div class="streak-pill">🔥 <span id="top-streak">0</span> Days Streak</div>
+        <div class="avatar" id="top-avatar">V</div>
+        <div class="top-name">
+          <strong id="top-name">Varshitha</strong>
+          <small id="top-level">Beginner</small>
+        </div>
+      </div>
+    </header>
+
+    <!-- HOME -->
+    <section class="page active" id="page-home">
+      <div class="home-hero">
+        <div class="hero-copy">
+          <span class="eyebrow">YOUR LITTLE LEARNING CORNER ✨</span>
+          <h1>Today is a great day to learn something new!</h1>
+          <p>You're making progress, and that matters. One lesson at a time. 💗</p>
+          <button class="primary-btn" data-go="learn">Continue Learning <span>→</span></button>
+        </div>
+        <div class="hero-art">
+          <div class="sparkle s1">✦</div>
+          <div class="sparkle s2">✧</div>
+          <div class="hero-peep">🐣</div>
+          <div class="laptop">▰<span>♡</span></div>
+          <div class="art-caption">Let's do this!</div>
+        </div>
+      </div>
+
+      <div class="goal-row">
+        <div class="goal-card">
+          <div class="card-heading">
+            <h3>🎯 Daily Goal</h3>
+            <button class="text-btn" id="edit-goal">Edit</button>
+          </div>
+          <p id="goal-text">Complete 1 lesson today</p>
+          <div class="progress-track"><div class="progress-fill" id="goal-bar"></div></div>
+          <div class="progress-label"><span id="goal-count">0 / 1</span><span id="goal-percent">0%</span></div>
+          <div class="goal-cheer" id="goal-cheer">🌷 A little progress goes a long way!</div>
+        </div>
+        <div class="week-card">
+          <div class="card-heading"><h3>🗓️ This Week</h3><span class="muted">Your study days</span></div>
+          <div class="week-days" id="week-days"></div>
+          <div class="legend"><span>🟢 Studied</span><span>🟣 Today</span><span>⚪ Not yet</span></div>
+        </div>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card pink-stat"><div class="stat-icon">📚</div><div><span>Lessons Completed</span><strong id="stat-lessons">0</strong><small id="stat-total">of 0 lessons</small></div></div>
+        <div class="stat-card orange-stat"><div class="stat-icon">🔥</div><div><span>Current Streak</span><strong id="stat-streak">0</strong><small>days — keep it up!</small></div></div>
+        <div class="stat-card purple-stat"><div class="stat-icon">🧠</div><div><span>Quiz Attempts</span><strong id="stat-quizzes">0</strong><small>completed</small></div></div>
+        <div class="stat-card green-stat"><div class="stat-icon">⭐</div><div><span>Overall Progress</span><strong id="stat-progress">0%</strong><div class="mini-track"><div id="overall-bar"></div></div></div></div>
+      </div>
+
+      <div class="section-heading">
+        <div><h2>Choose Your Subject</h2><p>Explore, learn, and become the best version of yourself!</p></div>
+        <button class="text-btn" data-go="learn">View all →</button>
+      </div>
+      <div class="subject-grid" id="home-subjects"></div>
+
+      <div class="featured-card">
+        <div class="featured-illustration">💻🐣</div>
+        <div class="featured-copy">
+          <span class="tag">PYTHON • BEGINNER</span>
+          <h3>Ready for your next little win?</h3>
+          <p>Learn a new concept, see an example, and try a quick check.</p>
+          <button class="primary-btn" data-open-subject="python">Start a Lesson →</button>
+        </div>
+        <div class="featured-points"><strong>Lesson includes</strong><span>✓ Clear explanation</span><span>✓ Simple example</span><span>✓ Quick quiz</span><span>✓ Practice tip</span></div>
+      </div>
+    </section>
+
+    <!-- LEARN -->
+    <section class="page" id="page-learn">
+      <div class="section-heading page-heading">
+        <div><h1>Your Learning Path 🌱</h1><p>Small lessons, steady progress. Choose where to begin.</p></div>
+      </div>
+      <div class="subject-grid learn-subjects" id="learn-subjects"></div>
+      <div class="lesson-area" id="lesson-area">
+        <div class="empty-state"><div>📚</div><h3>Choose a subject to begin</h3><p>Your next learning adventure is waiting!</p></div>
+      </div>
+    </section>
+
+    <!-- QUIZZES -->
+    <section class="page" id="page-quizzes">
+      <div class="section-heading page-heading"><div><h1>Quiz Corner 🧠</h1><p>Try what you've learned. Every attempt is practice!</p></div></div>
+      <div class="quiz-subjects" id="quiz-subjects"></div>
+      <div id="quiz-area" class="quiz-area">
+        <div class="empty-state"><div>✨</div><h3>Pick a quiz</h3><p>Choose a subject and test your knowledge.</p></div>
+      </div>
+    </section>
+
+    <!-- RESULTS -->
+    <section class="page" id="page-results">
+      <div class="section-heading page-heading"><div><h1>My Results 📊</h1><p>Look how far you've come. Your effort counts!</p></div></div>
+      <div id="results-content"></div>
+    </section>
+
+    <!-- STUDY BUDDY -->
+    <section class="page" id="page-buddy">
+      <div class="section-heading page-heading"><div><h1>Study Buddy 🐣</h1><p>Peep is here for questions, practice, and pep talks.</p></div></div>
+      <div class="buddy-page">
+        <div class="buddy-welcome"><div class="buddy-big">🐣</div><div><h2>Hiii! I'm Peep!</h2><p>Your tiny study buddy. Ask me to explain a topic or help you get started.</p></div></div>
+        <div class="chat-window" id="chat-window"><div class="chat-message peep-message">Hiii Varshitha! 🌼 What would you like to learn today?</div></div>
+        <div class="quick-prompts">
+          <button data-prompt="Explain variables">Explain variables</button>
+          <button data-prompt="What is a percentage?">What is a percentage?</button>
+          <button data-prompt="Explain DataFrames">DataFrames basics</button>
+          <button data-prompt="Motivate me">Motivate me 💪</button>
+        </div>
+        <form id="chat-form" class="chat-form"><input id="chat-input" placeholder="Ask Peep anything..." autocomplete="off"><button type="submit">➤</button></form>
+        <p class="muted small-note">Peep uses prepared answers in this version. You can ask about the lessons and study habits.</p>
+      </div>
+    </section>
+
+    <!-- CALENDAR -->
+    <section class="page" id="page-calendar">
+      <div class="section-heading page-heading"><div><h1>Your Study Calendar 🗓️</h1><p>Celebrate every day you show up for yourself.</p></div></div>
+      <div class="calendar-panel"><h2>This Week</h2><div class="calendar-days" id="calendar-days"></div><div class="calendar-note">🌷 A study day is recorded when you complete at least one lesson.</div></div>
+    </section>
+
+    <!-- BADGES -->
+    <section class="page" id="page-badges">
+      <div class="section-heading page-heading"><div><h1>Your Little Achievements 🏅</h1><p>Every badge is a reminder that you kept going.</p></div></div>
+      <div class="badges-grid" id="badges-grid"></div>
+    </section>
+
+    <!-- PROFILE -->
+    <section class="page" id="page-profile">
+      <div class="section-heading page-heading"><div><h1>My Profile 👤</h1><p>This is your learning space. Make it yours!</p></div></div>
+      <div class="profile-panel">
+        <div class="profile-avatar">🌸</div>
+        <form id="profile-form" class="profile-form">
+          <label for="profile-name">Your name</label>
+          <input id="profile-name" maxlength="40" required>
+          <label for="profile-level">Learning level</label>
+          <select id="profile-level"><option>Beginner</option><option>Growing</option><option>Practice</option></select>
+          <label for="profile-focus">Current focus</label>
+          <input id="profile-focus" maxlength="100" placeholder="What are you working on?">
+          <button class="primary-btn" type="submit">Save Profile 💗</button>
+          <p id="profile-message" class="form-message"></p>
+        </form>
+      </div>
+    </section>
+
+    <footer>LearnIQ <span>•</span> A little progress is still progress. 💗</footer>
+  </main>
+</div>
+<script src="/static/app.js"></script>
+</body>
+</html>
